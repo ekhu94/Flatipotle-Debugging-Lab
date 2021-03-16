@@ -16,8 +16,8 @@ class Form extends Component {
     ...DEFAULT_STATE
   }
 
-  handleSubmit() {
-    event.preventDefault()
+  handleSubmit = e => {
+    e.preventDefault()
     document.getElementById("order-form").reset()
     this.props.addOrder(this.state)
 
@@ -26,7 +26,7 @@ class Form extends Component {
     })
   }
 
-  handleChange() {
+  handleChange = event => {
     const itemType = event.target.name
     const item = event.target.value
 
@@ -76,4 +76,4 @@ class Form extends Component {
   }
 }
 
-export default Form
+export default Form;
